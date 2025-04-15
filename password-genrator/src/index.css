@@ -1,3 +1,54 @@
-*{
+body{
   background-color: black;
+  text-align: center;
+    height: 100%;
+    margin: 0;
+}
+#root {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_container{
+  width: 50%;
+  background-color: grey;
+  padding: 2vw;
+  margin: 5vh;
+  color: orange;
+  text-align: center;
+  border-radius: 10px;
+  
+}
+input{
+  outline: none;
+  width: 60%;
+  padding: 1.2vh 1.2vw;
+  border-radius: 1vw 0 0 1vw;
+  border: none;
+}
+.btn_copy{
+  outline: none;
+  border: none;
+  background-color: rgb(18, 99, 220);
+  color: white;
+  flex-shrink: initial;
+  padding: 1.2vh 1.2vw;
+  border-radius: 0 1vw 1vw 0;
+  
+}
+.check_input{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2vw;
+
+}
+.check_box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.range{
+  width: 60%;
 }

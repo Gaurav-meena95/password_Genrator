@@ -1,4 +1,5 @@
 {
+  "homepage": "https://Gaurav-meena95.github.io/sample  ",
   "name": "password-genrator",
   "private": true,
   "version": "0.0.0",
@@ -7,9 +8,11 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy" : "npm run dev",
+    "deploy" : "gh-pages -d build"
   },
-  "dependencies": {
+  "dependencies": { 
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

@@ -16,31 +16,40 @@ function App() {
 
     if (numberAllow) str += "0123456789";
     if (charAllow) str += "!@#$%^&*()_+=~`;:/?<>,.|";
-    for (let i = 1; i <=length; i++) {
+    for (let i = 1; i <= length; i++) {
       let char = Math.floor(Math.random() * str.length + 1);
       pass += str.charAt(char);
     }
-    setPassword(pass)
-  }, [length, numberAllow, charAllow,setPassword]);
+    setPassword(pass);
+  }, [length, numberAllow, charAllow, setPassword]);
 
+  const copyPassword = useCallback(() => {
+    passwordRef.current?.select();
+    window.navigator.clipboard.writeText(pass);
+    let id = setTimeout(() => {
+      alert("Password Copied");
+    }, 200);
+  }, [pass]);
 
-
-  useEffect(()=>{
-    PasswaordGenrtor()
-  },[length,numberAllow,charAllow,PasswaordGenrtor])
+  useEffect(() => {
+    PasswaordGenrtor();
+  }, [length, numberAllow, charAllow, PasswaordGenrtor]);
 
   return (
     <>
       <div className="main_container">
         <h1>Random PassWord GenertatoR</h1>
         <div className="input_box">
-          <input type="text"
-           value={pass} 
-           placeholder="Password" 
-           readOnly
-           ref={passwordRef}
-            />
-          <button onClick={copyPassword} className="btn_copy">Copy</button>
+          <input
+            type="text"
+            value={pass}
+            placeholder="Password"
+            readOnly
+            ref={passwordRef}
+          />
+          <button onClick={copyPassword} className="btn_copy">
+            Copy
+          </button>
         </div>
         <div className="check_box">
           <div className="check_input range">
@@ -54,28 +63,27 @@ function App() {
             <label>Length:{length}</label>
 
             <div className="check_input">
-              <input 
-              type="checkbox" 
-              defaultChecked ={numberAllow}
-              id="numberINput"
-              onChange={()=>{
-                setNumberAllow((pev)=> !pev)
-              }}
+              <input
+                type="checkbox"
+                defaultChecked={numberAllow}
+                id="numberINput"
+                onChange={() => {
+                  setNumberAllow((pev) => !pev);
+                }}
               />
               <label>Number</label>
             </div>
 
-
             <div className="check_input">
-            <input
-            type="checkbox"
-              defaultChecked ={charAllow}
-              id="numberINput"
-              onChange={()=>{
-                setCharAllow((pev)=> !pev)
-              }}
-             />
-            <label>Charcter</label>
+              <input
+                type="checkbox"
+                defaultChecked={charAllow}
+                id="numberINput"
+                onChange={() => {
+                  setCharAllow((pev) => !pev);
+                }}
+              />
+              <label>Charcter</label>
             </div>
           </div>
         </div>

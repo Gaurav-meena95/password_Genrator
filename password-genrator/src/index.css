@@ -70,3 +70,89 @@ input {
   align-items: center;
   gap: 2vw;
 }
+
+
+
+/* responsive  css code */
+
+/* for tablet */
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 2vw;
+  }
+
+  .main_container {
+    width: 70%;
+    padding: 3vw;
+  }
+
+  input {
+    width: 80%;
+    font-size: 2.5vw;
+    padding: 1.5vh 2vw;
+  }
+
+  .btn_copy {
+    font-size: 2.5vw;
+    padding: 1.5vh 2vw;
+  }
+
+  .check_input,
+  .input_box {
+    flex-direction: column;
+    gap: 3vw;
+  }
+
+  .range {
+    width: 100%;
+  }
+}
+
+/* for mobile */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 3vw;
+  }
+
+  .main_container {
+    width: 80%;
+    padding: 4vw;
+  }
+
+  input {
+    width: 100%;
+    font-size: 4vw;
+    padding: 1.5vh 2vw;
+  }
+
+  .btn_copy {
+    padding: 1.5vh 2vw;
+    font-size: 3.5vw;
+  }
+
+  .check_input,
+  .input_box {
+    flex-direction: column;
+    gap: 4vw;
+  }
+
+  .range {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 4vw;
+  }
+
+  input {
+    font-size: 5vw;
+  }
+
+  .btn_copy {
+    font-size: 4.5vw;
+  }
+}

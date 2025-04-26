@@ -1,10 +1,11 @@
 body {
-  background-color: black;
+  background-image:url('https://www.creative-tim.com/gpts/logos/password-generator.png');
   text-align: center;
   height: 100%;
   margin: 0;
   font-weight: 800;
   font-size: 1.3vw;
+  
 }
 
 #root {
@@ -16,7 +17,7 @@ body {
 
 .main_container {
   width: 50%;
-  background-color: grey;
+  background-color: rgba(57, 50, 64, 0.778);
   padding: 2vw;
   margin: 5vh;
   color: orange;
